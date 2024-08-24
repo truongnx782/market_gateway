@@ -36,7 +36,8 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
     WebClient webClient;
 
     @NonFinal
-    String[] publicEndpoints = {"/market_auth/auth/.*", "/market_trade/post/.*","/market_notification/notification/.*"};
+    String[] publicEndpoints = {"/market_auth/.*", "/market_trade/.*",
+            "/market_trade/.*","/market_notification/.*"};
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
